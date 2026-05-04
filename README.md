@@ -81,10 +81,13 @@ splunk-ssh-security-dashboard/
 │   └── readme_preview.png
 ```
 📷 Screenshots
+
 🔹 Dashboard Overview
+
 <img width="1365" height="767" alt="Final_Dashboard" src="https://github.com/user-attachments/assets/121ab587-7967-4abf-8db7-99a5510b9927" />
 
 <img width="1365" height="767" alt="Final_Dashboard_2" src="https://github.com/user-attachments/assets/8bacd170-63f1-463a-ac17-5fd229a29c43" />
+
 
 🚀 Features
 
