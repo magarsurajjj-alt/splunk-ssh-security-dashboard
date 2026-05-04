@@ -2,7 +2,6 @@
 
 ![Splunk](https://img.shields.io/badge/Splunk-Dashboard-green)
 ![Status](https://img.shields.io/badge/Status-Active-brightgreen)
-![License](https://img.shields.io/badge/License-MIT-blue)
 
 ## 📌 Overview
 This project provides a **Splunk dashboard** for monitoring SSH authentication logs. It helps identify suspicious activities such as failed login attempts, brute force attacks, and unauthorized access using visual analytics.
