@@ -35,7 +35,7 @@ This project provides a **Splunk dashboard** for monitoring SSH authentication l
 
 #### Total SSH Events
 ```spl
-source="ssh_logs.json" host="LinuxServer" sourcetype="_json"
+source="ssh_logs_new.json" host="LinuxServer" sourcetype="_json"
 | stats count AS "Total SSH Events"
 
 Successful Logins
@@ -46,22 +46,22 @@ Failed Logins
 source="ssh_logs_new.json" host="LinuxServer" sourcetype="_json" event_type="Failed SSH Login"
 | stats count AS "Failed Logins"
 
-Invalid User Attempts
-index=auth "sshd" "invalid user"
-| stats count AS "Invalid User Attempts"
+Connection Without Authentication
+source="ssh_logs_new.json" host="LinuxServer" sourcetype="_json" event_type="Connection Without Authentication"
+| stats count AS "Connection Without Authentication"
 
 📈 Login Activity Trends
 Failed Logins by Username
-source="ssh_logs_new.json" host="LinuxNew" sourcetype="_json" event_type="Failed SSH Login"
+source="ssh_logs_new.json" host="LinuxServer" sourcetype="_json" event_type="Failed SSH Login"
 | top username
 
 Possible Brute Force (Top IPs)
-source="ssh_logs_new.json" host="LinuxNew" sourcetype="_json" event_type="Multiple Failed Authentication Attempts"
+source="ssh_logs_new.json" host="LinuxServer" sourcetype="_json" event_type="Multiple Failed Authentication Attempts"
 | top id.orig_h
 
 🌍 Geo-location Analysis
 Brute Force Attack Map
-source="ssh_logs_new.json" host="LinuxNew" sourcetype="_json" event_type="Multiple Failed Authentication Attempts"
+source="ssh_logs_new.json" host="LinuxServer" sourcetype="_json" event_type="Multiple Failed Authentication Attempts"
 | table id.orig_h
 | iplocation id.orig_h
 | stats count by Country
