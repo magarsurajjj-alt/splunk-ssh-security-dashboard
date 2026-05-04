@@ -4,38 +4,26 @@
 ![Status](https://img.shields.io/badge/Status-Active-brightgreen)
 ![License](https://img.shields.io/badge/License-MIT-blue)
 
-## 📌 Overview
-This project provides a **Splunk dashboard** for monitoring SSH authentication logs. It helps identify suspicious activities such as failed login attempts, brute force attacks, and unauthorized access using visual analytics.
+📌 Overview
+This project provides a Splunk dashboard for monitoring SSH authentication logs. It helps identify suspicious activities such as failed login attempts, brute force attacks, and unauthorized access using visual analytics.
 
----
+🎯 Objective
+Monitor SSH authentication events
+Detect brute-force login attempts
+Analyze login trends
+Visualize attacker locations using geo-mapping
+⚙️ Setup Instructions
+1. Add Time Range Picker
+Label: Time Range
+Token: time_range
+2. Add Submit Button
+Used to apply selected filters
 
-## 🎯 Objective
-- Monitor SSH authentication events  
-- Detect brute-force login attempts  
-- Analyze login trends  
-- Visualize attacker locations using geo-mapping  
+📌 Note: Use time_range for all panels.
 
----
-
-## ⚙️ Setup Instructions
-
-### 1. Add Time Range Picker
-- Label: `Time Range`  
-- Token: `time_range`  
-
-### 2. Add Submit Button
-- Used to apply selected filters  
-
-📌 **Note:** Use `time_range` for all panels.
-
----
-
-## 📊 Dashboard Panels
-
-### 🔹 Authentication Overview
-
-#### Total SSH Events
-```spl
+📊 Dashboard Panels
+🔹 Authentication Overview
+Total SSH Events
 source="ssh_logs.json" host="LinuxServer" sourcetype="_json"
 | stats count AS "Total SSH Events"
 Successful Logins
@@ -61,6 +49,7 @@ source="ssh_logs_new.json" host="LinuxNew" sourcetype="_json" event_type="Multip
 | iplocation id.orig_h
 | stats count by Country
 | geom geo_countries featureIdField="Country"
+
 📂 Project Structure
 splunk-ssh-security-dashboard/
 │── README.md
@@ -75,7 +64,6 @@ splunk-ssh-security-dashboard/
 📷 Screenshots
 🔹 Dashboard Overview
 
-🔹 README Preview
 
 🚀 Features
 
