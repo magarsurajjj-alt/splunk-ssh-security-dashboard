@@ -1,0 +1,5 @@
+source="ssh_logs_new.json" host="LinuxServer" sourcetype="_json" event_type="Multiple Failed Authentication Attempts"
+| table id.orig_h
+| iplocation id.orig_h
+| stats count by Country
+| geom geo_countries featureIdField="Country"

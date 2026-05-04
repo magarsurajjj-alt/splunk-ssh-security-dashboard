@@ -1,0 +1,2 @@
+source="ssh_logs_new.json" host="LinuxServer" sourcetype="_json"
+ | stats count AS "Total SSH Events"
