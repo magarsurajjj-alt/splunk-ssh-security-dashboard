@@ -90,7 +90,7 @@ splunk-ssh-security-dashboard/
 
 -----------------------------------------------------------------------------------------------------------------------------
 
-
+```
 🛠️ Requirements
 Splunk Enterprise / Splunk Cloud
 SSH logs in JSON format
