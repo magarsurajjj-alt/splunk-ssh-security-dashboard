@@ -38,22 +38,28 @@ This project provides a **Splunk dashboard** for monitoring SSH authentication l
 ```spl
 source="ssh_logs.json" host="LinuxServer" sourcetype="_json"
 | stats count AS "Total SSH Events"
+
 Successful Logins
 source="ssh_logs.json" host="LinuxServer" sourcetype="_json" event_type="Successful SSH Login"
 | stats count AS "Successful Logins"
+
 Failed Logins
 source="ssh_logs.json" host="LinuxServer" sourcetype="_json" event_type="Failed SSH Login"
 | stats count AS "Failed Logins"
+
 Invalid User Attempts
 index=auth "sshd" "invalid user"
 | stats count AS "Invalid User Attempts"
+
 📈 Login Activity Trends
 Failed Logins by Username
 source="ssh_logs_new.json" host="LinuxNew" sourcetype="_json" event_type="Failed SSH Login"
 | top username
+
 Possible Brute Force (Top IPs)
 source="ssh_logs_new.json" host="LinuxNew" sourcetype="_json" event_type="Multiple Failed Authentication Attempts"
 | top id.orig_h
+
 🌍 Geo-location Analysis
 Brute Force Attack Map
 source="ssh_logs_new.json" host="LinuxNew" sourcetype="_json" event_type="Multiple Failed Authentication Attempts"
@@ -61,6 +67,7 @@ source="ssh_logs_new.json" host="LinuxNew" sourcetype="_json" event_type="Multip
 | iplocation id.orig_h
 | stats count by Country
 | geom geo_countries featureIdField="Country"
+
 📂 Project Structure
 splunk-ssh-security-dashboard/
 │── README.md
