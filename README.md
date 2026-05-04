@@ -67,8 +67,9 @@ source="ssh_logs_new.json" host="LinuxNew" sourcetype="_json" event_type="Multip
 | iplocation id.orig_h
 | stats count by Country
 | geom geo_countries featureIdField="Country"
-
+```
 📂 Project Structure
+```
 splunk-ssh-security-dashboard/
 │── README.md
 │── dashboard/
