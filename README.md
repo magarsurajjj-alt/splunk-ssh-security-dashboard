@@ -72,13 +72,12 @@ source="ssh_logs_new.json" host="LinuxServer" sourcetype="_json" event_type="Mul
 splunk-ssh-security-dashboard/
 │── README.md
 │── dashboard/
-│   └── ssh_dashboard.xml
+│   └── Final_dashboard.png
+|   └── Final_Dashboard_2.png
 │── data/
-│   ├── ssh_logs.json
 │   └── ssh_logs_new.json
 │── screenshots/
-│   ├── dashboard.png
-│   └── readme_preview.png
+│── Queries/
 ```
 📷 Screenshots
 
@@ -89,13 +88,8 @@ splunk-ssh-security-dashboard/
 
 <img width="1365" height="767" alt="Final_Dashboard_2" src="https://github.com/user-attachments/assets/8bacd170-63f1-463a-ac17-5fd229a29c43" />
 
+-----------------------------------------------------------------------------------------------------------------------------
 
-🚀 Features
-
-✔ Real-time SSH monitoring
-✔ Detection of brute-force attacks
-✔ Visualization using charts and maps
-✔ Geo-location tracking of attackers
 
 🛠️ Requirements
 Splunk Enterprise / Splunk Cloud
