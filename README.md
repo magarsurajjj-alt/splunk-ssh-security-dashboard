@@ -40,11 +40,11 @@ source="ssh_logs.json" host="LinuxServer" sourcetype="_json"
 | stats count AS "Total SSH Events"
 
 Successful Logins
-source="ssh_logs.json" host="LinuxServer" sourcetype="_json" event_type="Successful SSH Login"
+source="ssh_logs_new.json" host="LinuxServer" sourcetype="_json" event_type="Successful SSH Login"
 | stats count AS "Successful Logins"
 
 Failed Logins
-source="ssh_logs.json" host="LinuxServer" sourcetype="_json" event_type="Failed SSH Login"
+source="ssh_logs_new.json" host="LinuxServer" sourcetype="_json" event_type="Failed SSH Login"
 | stats count AS "Failed Logins"
 
 Invalid User Attempts
